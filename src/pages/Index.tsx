@@ -212,7 +212,7 @@ const Index = () => (
                 <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, j) => (
-                      <span key={j} className="text-yellow-500">★</span>
+                      <span key={j} className="text-secondary">★</span>
                     ))}
                   </div>
                   <p className="text-foreground leading-relaxed flex-1 mb-6">"{t.text}"</p>
