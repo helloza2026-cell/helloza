@@ -58,6 +58,27 @@ const sectors = [
   { icon: Globe, title: "Remote SMBs", desc: "Flexible operational support for distributed teams that need structure and speed." },
 ];
 
+const processSteps = [
+  { step: "01", title: "Discover", desc: "We learn your workflows, pain points, and the support gaps slowing the team down." },
+  { step: "02", title: "Map", desc: "We create a simple outsourcing plan around your volume, tools, and communication needs." },
+  { step: "03", title: "Launch", desc: "We set up the team, hand off the process, and start with clear ownership from day one." },
+  { step: "04", title: "Improve", desc: "We review outcomes, tighten operations, and expand coverage as your business grows." },
+];
+
+const startupPainPoints = [
+  { title: "Too many support tickets", desc: "We can take over email, chat, and call handling so internal teams can focus on product and growth.", icon: Headphones },
+  { title: "Back-office overload", desc: "Repetitive admin work, data entry, and document handling are easy wins for early outsourcing.", icon: Database },
+  { title: "No time for follow-up", desc: "We help with lead qualification, reminders, and coordination so important tasks do not slip.", icon: Cpu },
+  { title: "Need more consistency", desc: "Standardized processes and reporting make it easier to scale without chaos.", icon: Shield },
+];
+
+const faqs = [
+  { q: "What kind of companies use BPO early?", a: "Startups, SaaS companies, ecommerce brands, fintech teams, agencies, and SMBs often outsource first because they need more bandwidth without hiring too fast." },
+  { q: "What service should we outsource first?", a: "Most teams start with customer support, data entry, back-office admin, or lead qualification because those tasks are repetitive and time-sensitive." },
+  { q: "Can you scale with us later?", a: "Yes. We can start small and expand the scope as your ticket volume, team size, and workflows grow." },
+  { q: "Do you work with India and overseas clients?", a: "Yes. Helloza Bpo Solutions is set up for flexible remote support across different regions and business needs." },
+];
+
 const Index = () => (
   <>
     <SEO
@@ -205,6 +226,64 @@ const Index = () => (
         </div>
       </section>
 
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">How We Work</span>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
+                A Simple Startup-Friendly Delivery Process
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We keep onboarding straightforward so you can get support live without a long or complicated transition.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {processSteps.map((item, i) => (
+              <ScrollReveal key={item.step} delay={i * 0.08}>
+                <div className="glass-card rounded-2xl p-7 h-full">
+                  <div className="text-4xl font-heading font-bold text-secondary/30 mb-4">{item.step}</div>
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-muted/50">
+        <div className="container-wide">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Common Startup Challenges</span>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
+                The Problems We Usually Solve First
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                These are the areas where startups usually feel the fastest relief after adding BPO support.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-2 gap-6">
+            {startupPainPoints.map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 0.08}>
+                <div className="glass-card rounded-2xl p-7 h-full flex gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center shrink-0">
+                    <item.icon className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold text-foreground mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-muted/50">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -244,6 +323,32 @@ const Index = () => (
                 ))}
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-background">
+        <div className="container-wide max-w-4xl">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">FAQ</span>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
+                Common Questions About Startup BPO
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                A quick answer section helps visitors understand what we do and why outsourcing can help early-stage teams.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="space-y-4">
+            {faqs.map((item, i) => (
+              <ScrollReveal key={item.q} delay={i * 0.06}>
+                <div className="glass-card rounded-2xl p-6 md:p-7">
+                  <h3 className="font-heading text-lg md:text-xl font-semibold text-foreground mb-2">{item.q}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm md:text-base">{item.a}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
