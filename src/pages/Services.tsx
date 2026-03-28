@@ -16,7 +16,7 @@ const services = [
   {
     icon: Database,
     title: "Data Entry & Management",
-    desc: "Transform raw data into actionable business intelligence. Our ISO-certified data management services ensure 99.9% accuracy with rapid turnaround times for enterprises handling millions of records.",
+    desc: "Transform raw data into actionable business intelligence. Our data management services focus on accuracy, fast turnaround, and clean handoffs.",
     features: ["Data Entry & Digitization", "Data Cleansing & Validation", "Database Administration", "Document Indexing & Archiving"],
   },
   {
@@ -28,7 +28,7 @@ const services = [
   {
     icon: BarChart3,
     title: "Finance & Accounting Services",
-    desc: "Streamline your financial operations with expert accounting professionals. From accounts payable to financial reporting, we help enterprises cut finance operations costs by up to 50%.",
+    desc: "Streamline your financial operations with expert accounting support. From accounts payable to reporting, we help teams reduce manual work.",
     features: ["Accounts Payable/Receivable", "Payroll Processing", "Tax Preparation & Filing", "Financial Analysis & Reporting"],
   },
   {
@@ -46,7 +46,7 @@ const services = [
   {
     icon: MessageSquare,
     title: "Back Office Operations",
-    desc: "Free your team from repetitive administrative tasks. Our back-office solutions handle document processing, order management, and workflow automation with enterprise-grade efficiency.",
+    desc: "Free your team from repetitive administrative tasks. Our back-office solutions handle document processing, order management, and workflow automation with practical efficiency.",
     features: ["Document Processing", "Order Management", "Claims Processing", "Workflow Automation"],
   },
   {
@@ -64,6 +64,13 @@ const process = [
   { step: "04", title: "Continuous Optimization", desc: "Regular reviews, performance analytics, and process improvements for sustained excellence." },
 ];
 
+const startupUseCases = [
+  { title: "Customer Support", desc: "Email, chat, and call support so your team can stay focused on product and growth." },
+  { title: "Lead Qualification", desc: "Inbound screening and follow-up that keeps sales teams moving faster." },
+  { title: "Back-Office Admin", desc: "Data handling, document processing, and repeatable tasks that drain founder time." },
+  { title: "Operations Support", desc: "Scheduling, reporting, and coordination work that keeps the business running smoothly." },
+];
+
 const Services = () => (
   <main className="pt-20">
     {/* Hero */}
@@ -77,7 +84,7 @@ const Services = () => (
             Business Process Outsourcing Services That Drive Results
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto leading-relaxed">
-            From front-office customer engagement to back-office operational excellence, ApexBPO delivers end-to-end outsourcing solutions trusted by 500+ enterprises worldwide. Reduce costs, improve quality, and scale faster.
+            From front-office customer engagement to back-office operational support, Helloza Bpo Solutions delivers practical outsourcing services designed to help growing businesses work faster and stay organized.
           </p>
         </ScrollReveal>
       </div>
@@ -141,6 +148,32 @@ const Services = () => (
                 <div className="text-5xl font-heading font-bold text-secondary/20 mb-4">{p.step}</div>
                 <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{p.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{p.desc}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section className="section-padding bg-background">
+      <div className="container-wide">
+        <ScrollReveal>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Common Startup Needs</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
+              What Teams Usually Outsource First
+            </h2>
+            <p className="text-muted-foreground text-lg leading-relaxed">
+              Most growing businesses start with a few high-friction workflows. We help remove that pressure quickly and cleanly.
+            </p>
+          </div>
+        </ScrollReveal>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {startupUseCases.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 0.08}>
+              <div className="glass-card rounded-2xl p-7 h-full">
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-3">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">{item.desc}</p>
               </div>
             </ScrollReveal>
           ))}

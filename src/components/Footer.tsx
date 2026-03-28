@@ -1,21 +1,22 @@
 import { Link } from "react-router-dom";
-import { Headphones, Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import logoHello from "@/assets/logohello.png";
 
 const Footer = () => (
   <footer className="bg-primary text-primary-foreground">
     <div className="container-wide section-padding !pb-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         <div>
-          <Link to="/" className="flex items-center gap-2 mb-4">
-            <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center">
-              <Headphones className="w-5 h-5" />
-            </div>
-            <span className="font-heading text-xl font-bold">
-              Apex<span className="text-teal-light">BPO</span>
-            </span>
+          <Link to="/" className="flex items-center gap-3 mb-4">
+            <img
+              src={logoHello}
+              alt="Helloza Bpo Solutions logo"
+              className="h-14 md:h-16 w-auto max-w-[220px] object-contain"
+            />
+         
           </Link>
           <p className="text-primary-foreground/70 text-sm leading-relaxed">
-            Delivering world-class business process outsourcing solutions that drive efficiency, reduce costs, and accelerate growth for enterprises worldwide.
+            Delivering practical business process outsourcing support that helps growing teams stay organized, responsive, and ready to scale.
           </p>
           <div className="flex gap-3 mt-6">
             {[Linkedin, Twitter, Facebook].map((Icon, i) => (
@@ -64,8 +65,8 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-primary-foreground/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-primary-foreground/50">
-        <p>&copy; {new Date().getFullYear()} ApexBPO. All rights reserved.</p>
-        <p>Trusted by 500+ enterprises across 30+ countries</p>
+        <p>&copy; {new Date().getFullYear()} Helloza Bpo Solutions. All rights reserved.</p>
+        <p>Built to support ambitious teams with flexible BPO services</p>
       </div>
     </div>
   </footer>

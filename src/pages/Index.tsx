@@ -1,80 +1,105 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Headphones, BarChart3, Shield, Users, Globe, Clock, ArrowRight,
-  CheckCircle2, TrendingUp, Award, PhoneCall, Database, Cpu, Zap
+  Headphones,
+  BarChart3,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  CheckCircle2,
+  TrendingUp,
+  Award,
+  PhoneCall,
+  Database,
+  Cpu,
+  Zap,
+  ShoppingCart,
+  HeartPulse,
+  BadgeDollarSign,
+  Laptop,
+  Rocket,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import heroBpo from "@/assets/hero-bpo.jpg";
 
 const stats = [
-  { value: "500+", label: "Global Clients", icon: Globe },
-  { value: "15K+", label: "Skilled Professionals", icon: Users },
-  { value: "99.7%", label: "Client Retention", icon: TrendingUp },
-  { value: "30+", label: "Countries Served", icon: Award },
+  { value: "Fast", label: "Response times", icon: TrendingUp },
+  { value: "Flexible", label: "Support model", icon: Users },
+  { value: "24/7", label: "Coverage", icon: Award },
+  { value: "Lean", label: "Delivery setup", icon: Shield },
 ];
 
 const services = [
-  { icon: Headphones, title: "Customer Support", desc: "24/7 multi-channel customer support services including voice, email, chat, and social media management that boost customer satisfaction scores by up to 40%." },
-  { icon: Database, title: "Data Management", desc: "End-to-end data entry, processing, cleansing, and analytics services ensuring 99.9% accuracy with ISO-certified data handling protocols." },
-  { icon: Cpu, title: "IT Helpdesk", desc: "Comprehensive Level 1-3 technical support with rapid response times, reducing downtime by 60% and improving end-user productivity." },
-  { icon: BarChart3, title: "Finance & Accounting", desc: "Accounts payable/receivable, bookkeeping, payroll processing, and financial reporting that cut operational costs by up to 50%." },
-  { icon: Users, title: "HR Outsourcing", desc: "Recruitment, onboarding, benefits administration, and compliance management services that streamline your human capital operations." },
-  { icon: Shield, title: "Quality Assurance", desc: "Rigorous QA testing, process auditing, and compliance monitoring with Six Sigma methodologies ensuring world-class service delivery." },
+  { icon: Headphones, title: "Customer Support", desc: "24/7 multi-channel customer support services including voice, email, chat, and social media management that boost customer satisfaction scores." },
+  { icon: Database, title: "Data Management", desc: "End-to-end data entry, processing, cleansing, and analytics services ensuring accurate handling with clear workflows." },
+  { icon: Cpu, title: "IT Helpdesk", desc: "Comprehensive Level 1-3 technical support with rapid response times, reducing downtime and improving end-user productivity." },
+  { icon: BarChart3, title: "Finance & Accounting", desc: "Accounts payable/receivable, bookkeeping, payroll processing, and financial reporting that simplify operations." },
+  { icon: Users, title: "HR Outsourcing", desc: "Recruitment, onboarding, benefits administration, and compliance management services that streamline your people operations." },
+  { icon: Shield, title: "Quality Assurance", desc: "Rigorous QA testing, process auditing, and compliance monitoring with a focus on consistent delivery." },
 ];
 
 const whyChoose = [
-  "ISO 27001 & SOC 2 certified security protocols",
-  "24/7/365 operations across multiple time zones",
-  "Scalable teams from 5 to 5,000+ agents",
-  "AI-powered automation and analytics",
-  "Dedicated account managers for every client",
-  "Average 45% cost reduction for clients",
+  "Practical security and process controls",
+  "Flexible support that adapts as you grow",
+  "Scalable teams without unnecessary overhead",
+  "Automation where it actually helps",
+  "Direct communication and clear ownership",
+  "Startup-friendly delivery and pricing mindset",
 ];
 
-const testimonials = [
-  { name: "Sarah Mitchell", role: "COO, TechVista Inc.", text: "ApexBPO transformed our customer service operations. Response times dropped by 65% and CSAT scores hit an all-time high of 96%." },
-  { name: "James Rodriguez", role: "CFO, GlobalRetail Corp", text: "Outsourcing our finance operations to ApexBPO saved us $2.3M annually while improving accuracy and compliance across the board." },
-  { name: "Emily Chen", role: "VP Operations, MedFlow Health", text: "Their HIPAA-compliant processes and dedicated healthcare team gave us the confidence to outsource critical patient support functions." },
+const sectors = [
+  { icon: Rocket, title: "SaaS Startups", desc: "Onboarding, first-line support, and helpdesk coverage for product-led teams." },
+  { icon: ShoppingCart, title: "D2C Brands", desc: "Order support, refunds, and customer communication for fast-moving ecommerce teams." },
+  { icon: BadgeDollarSign, title: "Fintech", desc: "KYC support, document handling, and back-office workflows for financial products." },
+  { icon: HeartPulse, title: "Healthcare", desc: "Appointment support, patient coordination, and admin assistance for healthcare teams." },
+  { icon: Laptop, title: "Agencies", desc: "Client communication, admin tasks, and project coordination for creative agencies." },
+  { icon: Globe, title: "Remote SMBs", desc: "Flexible operational support for distributed teams that need structure and speed." },
 ];
 
 const Index = () => (
   <>
-    {/* SEO-optimized meta handled by index.html */}
     <main>
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative isolate overflow-hidden pt-28 md:pt-32 pb-16 md:pb-20">
         <div className="absolute inset-0">
-          <img src={heroBpo} alt="Professional BPO team delivering customer support services" width={1920} height={1080} className="w-full h-full object-cover" />
-          <div className="absolute inset-0 hero-gradient opacity-85" />
+          <img
+            src={heroBpo}
+            alt="Professional BPO team delivering customer support services"
+            width={1920}
+            height={1080}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-slate-950/45" />
+          <div className="absolute inset-0 hero-gradient opacity-80" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.18),transparent_38%),radial-gradient(circle_at_bottom_right,rgba(52,211,153,0.2),transparent_32%)]" />
         </div>
-        <div className="relative container-wide px-4 md:px-8 pt-20">
-          <div className="max-w-3xl">
+        <div className="relative container-wide px-4 md:px-8">
+          <div className="max-w-3xl pt-6 md:pt-12">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 text-primary-foreground/90 text-sm font-medium mb-6">
-                <Zap className="w-4 h-4" /> Trusted by Fortune 500 Companies
+                <Zap className="w-4 h-4" /> Built for growing teams
               </span>
             </motion.div>
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-[1.05] tracking-tight mb-6 max-w-3xl"
             >
-              Elevate Your Business with{" "}
-              <span className="text-teal-light">World-Class BPO Solutions</span>
+              Practical BPO Support for{" "}
+              <span className="text-teal-light">Growing Teams</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mb-10 leading-relaxed"
+              className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mb-10 leading-relaxed"
             >
-              From customer support to finance and IT operations, ApexBPO delivers scalable outsourcing solutions that reduce costs by up to 50% while enhancing service quality across 30+ countries.
+              Helloza Bpo Solutions helps modern businesses handle customer support, operations, and back-office work with clear communication, flexible setup, and a startup-friendly approach.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -90,40 +115,38 @@ const Index = () => (
               </Link>
             </motion.div>
           </div>
-        </div>
-
-        {/* Floating stats on hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="absolute bottom-8 left-4 right-4 md:left-8 md:right-8"
-        >
-          <div className="container-wide">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mt-14 md:mt-20"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-5">
               {stats.map((stat) => (
-                <div key={stat.label} className="bg-primary-foreground/10 backdrop-blur-md rounded-xl p-4 md:p-6 border border-primary-foreground/10 text-center">
-                  <stat.icon className="w-6 h-6 text-teal-light mx-auto mb-2" />
-                  <div className="stat-number text-primary-foreground text-3xl md:text-4xl">{stat.value}</div>
-                  <div className="text-primary-foreground/70 text-sm mt-1">{stat.label}</div>
+                <div
+                  key={stat.label}
+                  className="rounded-2xl p-5 md:p-7 text-center text-primary-foreground backdrop-blur-xl bg-white/10 border border-white/15 shadow-[0_20px_60px_-24px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:-translate-y-1"
+                >
+                  <stat.icon className="w-6 h-6 text-teal-light mx-auto mb-3" />
+                  <div className="stat-number text-3xl md:text-4xl">{stat.value}</div>
+                  <div className="text-primary-foreground/75 text-sm mt-1">{stat.label}</div>
                 </div>
               ))}
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </section>
 
-      {/* Services Section */}
       <section className="section-padding bg-background" id="services">
         <div className="container-wide">
           <ScrollReveal>
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Core Services</span>
               <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
-                Comprehensive BPO Solutions for Modern Enterprises
+                Flexible BPO Services for Modern Businesses
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                We offer a complete range of business process outsourcing services designed to optimize your operations, reduce overhead costs, and empower your team to focus on strategic growth initiatives.
+                We offer a practical range of business process outsourcing services designed to reduce busywork, improve response times, and help your team stay focused on growth.
               </p>
             </div>
           </ScrollReveal>
@@ -147,17 +170,45 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      <section className="section-padding bg-muted/50">
+        <div className="container-wide">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Where BPO Helps Most</span>
+              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
+                Teams That Benefit From Outsourcing Early
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                We work best with teams that need more capacity, more consistency, and a partner that can adapt as the business evolves.
+              </p>
+            </div>
+          </ScrollReveal>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sectors.map((sector, i) => (
+              <ScrollReveal key={sector.title} delay={i * 0.08}>
+                <div className="glass-card rounded-2xl p-7 h-full">
+                  <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5">
+                    <sector.icon className="w-7 h-7 text-secondary" />
+                  </div>
+                  <h3 className="font-heading text-xl font-semibold text-foreground mb-3">{sector.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{sector.desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section-padding bg-muted/50">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal direction="left">
-              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Why Choose ApexBPO</span>
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Why Choose Helloza</span>
               <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-6">
-                The Trusted Partner for Business Process Excellence
+                Built for a Startup-First Operation
               </h2>
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                With over 15 years of experience, ApexBPO has established itself as a global leader in business process outsourcing. Our combination of cutting-edge technology, highly trained professionals, and proven methodologies delivers measurable results for enterprises of every size.
+                Helloza Bpo Solutions keeps things lean, responsive, and practical. We focus on clear ownership, fast handoffs, and support that grows with your business instead of slowing it down.
               </p>
               <ul className="space-y-4">
                 {whyChoose.map((item) => (
@@ -168,17 +219,17 @@ const Index = () => (
                 ))}
               </ul>
               <Link to="/about" className="btn-primary inline-flex items-center gap-2 mt-8">
-                About Our Company <ArrowRight className="w-4 h-4" />
+                About Helloza <ArrowRight className="w-4 h-4" />
               </Link>
             </ScrollReveal>
 
             <ScrollReveal direction="right">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { num: "15+", label: "Years of Excellence", color: "bg-primary" },
-                  { num: "50M+", label: "Transactions Processed Monthly", color: "bg-secondary" },
-                  { num: "98%", label: "First Call Resolution Rate", color: "bg-secondary" },
-                  { num: "45%", label: "Average Cost Savings", color: "bg-primary" },
+                  { num: "Fast", label: "Response cycles", color: "bg-primary" },
+                  { num: "Lean", label: "Operating model", color: "bg-secondary" },
+                  { num: "Simple", label: "Communication", color: "bg-secondary" },
+                  { num: "Flexible", label: "Scaling options", color: "bg-primary" },
                 ].map((item, i) => (
                   <div key={i} className={`${item.color} text-primary-foreground rounded-2xl p-6 flex flex-col justify-center items-center text-center`}>
                     <div className="stat-number text-3xl md:text-4xl">{item.num}</div>
@@ -191,51 +242,14 @@ const Index = () => (
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <ScrollReveal>
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Client Testimonials</span>
-              <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-5">
-                Trusted by Industry Leaders Worldwide
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Discover how businesses across healthcare, finance, retail, and technology sectors have achieved remarkable results through our BPO partnership.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={i} delay={i * 0.15}>
-                <div className="glass-card rounded-2xl p-8 h-full flex flex-col">
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, j) => (
-                      <span key={j} className="text-secondary">★</span>
-                    ))}
-                  </div>
-                  <p className="text-foreground leading-relaxed flex-1 mb-6">"{t.text}"</p>
-                  <div>
-                    <div className="font-heading font-semibold text-foreground">{t.name}</div>
-                    <div className="text-sm text-muted-foreground">{t.role}</div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <section className="section-padding hero-gradient">
         <div className="container-wide text-center">
           <ScrollReveal>
             <h2 className="font-heading text-3xl md:text-5xl font-bold text-primary-foreground mb-6">
-              Ready to Transform Your Business Operations?
+              Ready to Build a Better Support Setup?
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto mb-10">
-              Join 500+ enterprises that have achieved operational excellence with ApexBPO. Get a customized outsourcing strategy tailored to your unique business needs — completely free.
+              If you want a startup-minded team that can grow with you, let&apos;s talk about the right outsourcing setup for your business.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/contact" className="btn-secondary">

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Headphones } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoHello from "@/assets/logohello.png";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -18,13 +19,13 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-lg border-b border-border/50">
       <div className="container-wide flex items-center justify-between h-16 md:h-20 px-4 md:px-8">
-        <Link to="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg hero-gradient flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <Headphones className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <span className="font-heading text-xl font-bold text-foreground">
-            Apex<span className="text-secondary">BPO</span>
-          </span>
+        <Link to="/" className="flex items-center gap-3 group shrink-0">
+          <img
+            src={logoHello}
+            alt="Helloza Bpo Solutions logo"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+         
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight, Building2, ShoppingCart, Heart, Landmark, Plane,
-  GraduationCap, Factory, Wifi, CheckCircle2
+  GraduationCap, Factory, Wifi, CheckCircle2, Rocket, BadgeDollarSign, Laptop, Store
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -51,7 +51,7 @@ const industries = [
   {
     icon: Factory,
     title: "Manufacturing & Logistics",
-    desc: "Supply chain coordination, vendor management, and logistics support that streamline operations for manufacturing enterprises. Real-time tracking and reporting capabilities.",
+    desc: "Supply chain coordination, vendor management, and logistics support that streamline operations for manufacturing teams. Real-time tracking and reporting capabilities.",
     stats: "60+ manufacturing clients | 30% efficiency improvement",
     benefits: ["Supply Chain Coordination", "Vendor Management", "Logistics Support", "Inventory Tracking"],
   },
@@ -61,6 +61,34 @@ const industries = [
     desc: "Subscriber management, technical troubleshooting, and billing support for telecom providers. Our specialized teams handle high-volume environments with consistent quality.",
     stats: "30+ telecom providers | 20M+ subscriber interactions",
     benefits: ["Subscriber Management", "Technical Troubleshooting", "Billing & Collections", "Network Operations Support"],
+  },
+  {
+    icon: Rocket,
+    title: "SaaS & Product Startups",
+    desc: "Onboarding, customer success, and support operations for software teams launching and scaling fast.",
+    stats: "High-growth founders | fast implementation",
+    benefits: ["Onboarding Support", "Tier 1 Helpdesk", "Customer Success Ops", "Feedback Collection"],
+  },
+  {
+    icon: BadgeDollarSign,
+    title: "Fintech & Lending",
+    desc: "KYC assistance, document verification, and back-office process support for financial products and lending platforms.",
+    stats: "Finance-led teams | compliance-first workflows",
+    benefits: ["KYC Support", "Document Verification", "Loan Workflow Admin", "Risk Process Support"],
+  },
+  {
+    icon: Store,
+    title: "D2C & Subscription Brands",
+    desc: "Customer care, returns handling, and order support for consumer brands that need speed and consistency.",
+    stats: "Fast-moving consumer teams | omnichannel coverage",
+    benefits: ["Order Support", "Returns Management", "Subscription Helpdesk", "Customer Retention"],
+  },
+  {
+    icon: Laptop,
+    title: "Agencies & Professional Services",
+    desc: "Admin support, client communication, and coordination for agencies and service businesses that need extra bandwidth.",
+    stats: "Small teams | high-touch client work",
+    benefits: ["Inbox Management", "Project Coordination", "Client Updates", "Admin Support"],
   },
 ];
 
@@ -76,7 +104,7 @@ const Industries = () => (
             BPO Solutions Tailored to Your Industry
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-3xl mx-auto leading-relaxed">
-            Deep domain expertise across 8+ industries. Our specialized teams understand your regulatory requirements, competitive challenges, and operational nuances to deliver solutions that create real business impact.
+            Deep domain expertise across 12+ industries. Our specialized teams understand your regulatory requirements, competitive challenges, and operational nuances to deliver solutions that create real business impact.
           </p>
         </ScrollReveal>
       </div>
