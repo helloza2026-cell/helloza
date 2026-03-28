@@ -23,7 +23,7 @@ const Header = () => {
           <img
             src={logoHello}
             alt="Helloza Bpo Solutions logo"
-            className="h-[60px] md:h-[70px] w-auto max-w-[250px] object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-[92px] md:h-[102px] w-auto max-w-[285px] object-contain transition-transform duration-300 group-hover:scale-105"
           />
          
         </Link>

@@ -11,7 +11,7 @@ const Footer = () => (
             <img
               src={logoHello}
               alt="Helloza Bpo Solutions logo"
-              className="h-[64px] md:h-[76px] w-auto max-w-[260px] object-contain"
+              className="h-[120px] md:h-[150px] w-auto max-w-[300px] object-contain"
             />
           </Link>
           <p className="text-muted-foreground text-sm leading-relaxed">
