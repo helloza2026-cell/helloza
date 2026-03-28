@@ -5,6 +5,7 @@ import {
   ClipboardCheck, Settings, Briefcase, Target
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const services = [
   {
@@ -73,6 +74,11 @@ const startupUseCases = [
 
 const Services = () => (
   <main className="pt-20">
+    <SEO
+      title="BPO Services for Startups"
+      description="Explore Helloza Bpo Solutions services for customer support, data entry, IT helpdesk, finance, HR, back office, and digital marketing."
+      path="/services"
+    />
     {/* Hero */}
     <section className="section-padding hero-gradient">
       <div className="container-wide text-center">

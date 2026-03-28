@@ -21,6 +21,7 @@ import {
   Rocket,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import heroBpo from "@/assets/hero-bpo.jpg";
 
 const stats = [
@@ -59,6 +60,11 @@ const sectors = [
 
 const Index = () => (
   <>
+    <SEO
+      title="Startup BPO Services"
+      description="Helloza Bpo Solutions provides startup-friendly BPO services for SaaS, D2C, fintech, healthcare, agencies, and SMBs."
+      path="/"
+    />
     <main>
       <section className="relative isolate overflow-hidden pt-28 md:pt-32 pb-16 md:pb-20">
         <div className="absolute inset-0">

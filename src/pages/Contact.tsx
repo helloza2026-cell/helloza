@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
   { icon: Phone, label: "Phone", value: "+1 (800) 555-0199", sub: "Mon-Fri 8AM-8PM EST" },
-  { icon: Mail, label: "Email", value: "info@apexbpo.com", sub: "Response within 2 hours" },
+  { icon: Mail, label: "Email", value: "info@helloza.co.in", sub: "Response within 2 hours" },
   { icon: MapPin, label: "Headquarters", value: "123 Business District, Suite 500", sub: "New York, NY 10001" },
   { icon: Clock, label: "Operations", value: "24/7/365", sub: "Global delivery centers" },
 ];
@@ -22,6 +23,11 @@ const Contact = () => {
 
   return (
     <main className="pt-20">
+      <SEO
+        title="Contact Helloza Bpo Solutions"
+        description="Get in touch with Helloza Bpo Solutions for startup-friendly BPO support, outsourcing consultation, and custom operations help."
+        path="/contact"
+      />
       <section className="section-padding hero-gradient">
         <div className="container-wide text-center">
           <ScrollReveal>
@@ -142,11 +148,11 @@ const Contact = () => {
                 <div className="glass-card rounded-2xl p-6 bg-secondary/5">
                   <h3 className="font-heading font-semibold text-foreground mb-3">Global Offices</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>🇺🇸 New York, USA (HQ)</li>
-                    <li>🇬🇧 London, United Kingdom</li>
-                    <li>🇵🇭 Manila, Philippines</li>
-                    <li>🇮🇳 Bangalore, India</li>
-                    <li>🇦🇺 Sydney, Australia</li>
+                    <li>New York, USA (HQ)</li>
+                    <li>London, United Kingdom</li>
+                    <li>Manila, Philippines</li>
+                    <li>Bangalore, India</li>
+                    <li>Sydney, Australia</li>
                   </ul>
                 </div>
               </ScrollReveal>

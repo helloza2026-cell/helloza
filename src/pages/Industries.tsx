@@ -4,6 +4,7 @@ import {
   GraduationCap, Factory, Wifi, CheckCircle2, Rocket, BadgeDollarSign, Laptop, Store
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 
 const industries = [
   {
@@ -94,6 +95,11 @@ const industries = [
 
 const Industries = () => (
   <main className="pt-20">
+    <SEO
+      title="Industries We Serve"
+      description="See the industries Helloza Bpo Solutions supports, including SaaS startups, fintech, D2C brands, healthcare, education, and more."
+      path="/industries"
+    />
     <section className="section-padding hero-gradient">
       <div className="container-wide text-center">
         <ScrollReveal>

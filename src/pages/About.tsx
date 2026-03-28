@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Heart, Award, Building, ShoppingCart, Cpu, HeartPulse, BadgeDollarSign, Laptop, Rocket } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import SEO from "@/components/SEO";
 import aboutImg from "@/assets/about-bpo.jpg";
 
 const values = [
@@ -21,6 +22,11 @@ const sectors = [
 
 const About = () => (
   <main className="pt-20">
+    <SEO
+      title="About Helloza Bpo Solutions"
+      description="Learn how Helloza Bpo Solutions helps growing businesses with startup-friendly BPO support, flexible delivery, and practical operations help."
+      path="/about"
+    />
     <section className="section-padding hero-gradient">
       <div className="container-wide text-center">
         <ScrollReveal>
